@@ -1,5 +1,26 @@
-<h2>新規ブログ作成</h2>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6 col-md-12">
+      <h3>本日はどんなトレーニングをしましたか？</h3>
+      <%= render 'form' %>
+      <%= link_to 'ブログ一覧に戻る', @blog %>
+    </div>
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="5000">
+      <div class="carousel-inner col-xs-6 col-md-12">
+        <div class="carousel-item active">
+          <%= image_tag "running.jpg" ,class:"d-block w-50"%>
+        </div>
+        <div class="carousel-item">
+          <%= image_tag "loadbike.jpg" ,class:"d-block w-50"%>
+        </div>
+        <div class="carousel-item">
+          <%= image_tag "strech.jpg" ,class:"d-block w-50"%>
+        </div>
+        <div class="carousel-item">
+          <%= image_tag "taikan.jpg" ,class:"d-block w-50"%>
+        </div>
+      </div>
+    </div>
 
-<%= render 'form' %>
-
-<%= link_to 'ブログ一覧に戻る', @blog %>
+  </div>
+</div>
