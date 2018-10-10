@@ -7,9 +7,9 @@
   <%= form.hidden_field :condition %>
   <%= form.hidden_field :content %>
 
-  <p>タイトル:<%= @blog.title %></p>
-  <p>タイトル:<%= @blog.condition %></p>
-  <p>本文:<%= @blog.content %></p>
+  <p>本日のトレーニング:<%= @blog.title %></p>
+  <p>コンディション:<%= @blog.condition %></p>
+  <p>感想:<%= @blog.content %></p>
   <%= form.submit  "登録する" %>
 <% end %>
 
