@@ -2,11 +2,15 @@ class BlogsController < ApplicationController
   before_action :set_blog, only:[:show, :edit, :update, :destroy]
 
    def index
-       @blog = Blog.all
+       @blogs = Blog.all
    end
 
    def new
-       @blog = Blog.new
+     if params[:back]
+      @blog = Blog.new(blog_params)
+     else
+      @blog = Blog.new
+     end
    end
 
    def confirm
