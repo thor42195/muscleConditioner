@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'user/new'
+
   root to: 'blogs#index'
   resources :blogs do
     collection do
