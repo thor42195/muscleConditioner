@@ -15,11 +15,13 @@ class BlogsController < ApplicationController
 
    def confirm
        @blog = Blog.new(blog_params)
+       @blog.user_id = current_user.id
        render :new if @blog.invalid?
    end
 
    def create
        @blog = Blog.new(blog_params)
+       @blog.user_id = current_user.id
        if @blog.save
            redirect_to new_blog_path, notice: "make new blog!!"
        else
@@ -28,6 +30,7 @@ class BlogsController < ApplicationController
    end
 
    def show
+     @favarite = current_user.favorites.find_by(blog_id: @blog.id)
    end
 
    def edit

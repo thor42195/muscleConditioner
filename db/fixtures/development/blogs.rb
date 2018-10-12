@@ -1,8 +1,9 @@
-User.seed do |s|
+blog.seed do |s|
   s.id    = 1
-  s.name  = "test1"
-  s.email = "test1@example.com"
-  s.password_digest = "testtest"
+  s.title  = "test1"
+  s.condition = "test1@example.com"
+  s.content = "testtest"
+  s.user_id = 1
 end
 
 User.seed do |s|

@@ -57,3 +57,5 @@ gem 'lazy_high_charts'
 gem 'bcrypt', '~> 3.1.12'
 
 gem 'seed-fu', '~> 2.3'
+
+gem 'will_paginate', '3.1.5'

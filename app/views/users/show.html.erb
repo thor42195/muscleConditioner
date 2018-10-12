@@ -9,3 +9,19 @@
     </section>
   </aside>
 </div>
+<div class="container">
+  <h2>Your Favorite blog</h2>
+  <div class="row">
+    <% @favorites_blogs.each do |favorites| %>
+  </div>
+  <div class="card">
+    <div class="card-header">
+      <%= favorites.title %>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">今日のコンディション：<%= favorites.condition%></h5>
+      <p class="card-text"><%= favorites.content %></p>
+    <%end %>
+    </div>
+  </div>
+</div>
