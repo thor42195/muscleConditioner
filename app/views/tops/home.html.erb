@@ -1,3 +1,37 @@
-<h1>Tops#home</h1>
-<p>Find me in app/views/tops/home.html.erb</p>
-<%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+<div class="top-image">
+  <%= image_tag 'top-image.jpg' ,class:"top-image"%>
+  <p>日々の振り返りが、より結果に近く</p>
+  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+</div>
+
+
+<style>
+.top-image{
+  width:100%;
+}
+.top-image p {
+    width: 100%;
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    font-size: 2.5em;
+    top: 30%;
+    left: 80%;
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0;
+}
+
+.top-signup {
+    position: absolute;
+    font-weight: bold;
+    font-size: 2.5em;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0;
+}
+</style>
