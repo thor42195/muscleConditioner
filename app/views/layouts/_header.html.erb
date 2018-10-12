@@ -12,10 +12,10 @@
         <%= link_to '筋肉一覧に戻る', blogs_path, class: "nav-link" %>
       </li>
       <% if logged_in? %>
-        <li><%= link_to "Users", '#' %></li>
-        <li><%= link_to "Profile", current_user %></li>
-        <li><%= link_to "Settings", '#' %></li>
-        <li><%= link_to "Log out", logout_path, method: :delete %></li>
+        <li><%= link_to "Users", '#',class: "nav-link" %></li>
+        <li><%= link_to "Profile", current_user,class: "nav-link" %></li>
+        <li><%= link_to "Settings", '#',class: "nav-link" %></li>
+        <li><%= link_to "Log out", logout_path, method: :delete,class: "nav-link" %></li>
       <% else %>
         <li><%= link_to "Log in", login_path, class: "nav-link"%></li>
         <li><%= link_to "Sign up", signup_path, class: "nav-link" %></li>
