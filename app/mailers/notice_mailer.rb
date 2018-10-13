@@ -3,5 +3,5 @@ class NoticeMailer < ApplicationMailer
      @blog = blog
      @blog.user_id = user
      mail to: user, subject: "ブログの確認メール"
-   end
+  end
 end
