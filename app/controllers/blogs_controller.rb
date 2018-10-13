@@ -22,10 +22,12 @@ class BlogsController < ApplicationController
    def create
        @blog = Blog.new(blog_params)
        @blog.user_id = current_user.id
+
        if @blog.save
-           redirect_to new_blog_path, notice: "make new blog!!"
+         NoticeMailer.notice_mail(@blog, @blog.user_id).deliver
+         redirect_to new_blog_path, notice: "make new blog!!"
        else
-           render'new'
+         render'new'
        end
    end
 
