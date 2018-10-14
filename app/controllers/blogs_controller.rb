@@ -24,7 +24,7 @@ class BlogsController < ApplicationController
        @blog.user_id = current_user.id
 
        if @blog.save
-         NoticeMailer.notice_mail(@blog, @blog.user_id).deliver
+         NoticeMailer.notice_mail(@blog).deliver
          redirect_to new_blog_path, notice: "make new blog!!"
        else
          render'new'
